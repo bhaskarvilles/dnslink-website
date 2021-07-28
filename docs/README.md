@@ -210,6 +210,10 @@ const { links, path } = await resolveN('redirecting.domain')
 reducePath(links.ipfs[0], path) // <value>/some/path?foo=bar
 ```
 
+#### TTL's with redirects
+
+When a redirect is followed, the `ttl` of all links found will be maxed at the `ttl` of the redirect entry.
+
 ### Encoding
 
 DNSLink entries are limited to [ASCII][] characters. For Unicode/UTF-8 characters, DNSLink clients support [percent encoding][%-encoding] transparently.
